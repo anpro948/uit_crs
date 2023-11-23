@@ -1,0 +1,5 @@
+# dataset
+dataset: ReDial
+tokenize:
+  rec: nltk
+  conv: nltk

@@ -20,13 +20,13 @@ class ReDialDataset(BaseDataset):
         self.special_token_idx = resource['special_token_idx']
         self.unk_token_idx = self.special_token_idx['unk']
         dpath = os.path.join(DATASET_PATH, 'redial', tokenize)
-        super().__init(opt, dpath, resource, restore, save)
+        super().__init__(opt, dpath, resource, restore, save)
     
 
     def _load_data(self):
         train_data, valid_data, test_data = self._load_raw_data()
         self._load_vocab()
-        self.load_other_data()
+        self._load_other_data()
 
         vocab = {
             'tok2ind': self.tok2ind,
@@ -105,7 +105,7 @@ class ReDialDataset(BaseDataset):
 
     
     def _raw_data_process(self, raw_data) -> List[Dict]:
-        augmented_convs = [self.merge_conv_data(conversation["dialog"]) for conversation in tqdm(raw_data)]
+        augmented_convs = [self._merge_conv_data(conversation["dialog"]) for conversation in tqdm(raw_data)]
         augmented_conv_dicts = []
         for conv in tqdm(augmented_convs):
             #conv is a list of tokenized utt of a dialog

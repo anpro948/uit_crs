@@ -1,6 +1,6 @@
 import os
 import pickle
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 import numpy as np
 from loguru import logger
@@ -32,15 +32,15 @@ class BaseDataset(ABC):
             self._save_to_restore(data)
     
 
-    @abstractclassmethod
+    @abstractmethod
     def _load_data(self):
         pass
 
-    @abstractclassmethod
+    @abstractmethod
     def _data_preprocess(self, train_data, valid_data, test_data):
         pass
 
-    @abstractclassmethod
+
     def _load_from_restore(self, file_name="all_data.pkl"):
         if not os.path.exists(os.path.join(self.dpath, file_name)):
             raise ValueError(f'Saved dataset [{file_name}] does not exist')
@@ -49,7 +49,7 @@ class BaseDataset(ABC):
         logger.info(f'Restore dataset from [{file_name}]')
         return dataset
 
-    @abstractclassmethod
+
     def _save_to_restore(self, data, file_name="all_data.pkl"):
         if not os.path.exists(self.dpath):
             os.makedirs(self.dpath)

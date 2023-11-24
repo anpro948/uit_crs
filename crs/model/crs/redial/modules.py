@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pad_packed_sequence, pack_padded_sequence
 
-from crslab.model.utils.functions import sort_for_packed_sequence
+from crs.model.utils.functions import sort_for_packed_sequence
 
 
 class HRNN(nn.Module):

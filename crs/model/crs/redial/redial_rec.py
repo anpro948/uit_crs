@@ -85,6 +85,8 @@ class ReDialRecModel(BaseModel):
         for i, layer in enumerate(self.encoder):
             context_entities = self.f(layer(context_entities))
         scores = self.g(self.decoder(context_entities))
-        loss = self.loss(scores, batch['item'])
-
-        return loss, scores
+        if mode == 'infer':
+            return scores
+        else:
+            loss = self.loss(scores, batch['item'])
+            return loss, scores

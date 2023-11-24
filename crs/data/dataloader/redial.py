@@ -5,7 +5,7 @@ import torch
 from tqdm import tqdm
 
 from crs.data.dataloader.base import BaseDataLoader
-from crs.data.dataloader.utils import padded_tensor, get_onehot, truncate
+from crs.data.dataloader.utils import padded_tensor, get_onehot, truncate, add_start_end_token_idx, merge_utt
 
 movie_pattern = re.compile(r'^@\d{5,6}$')
 
@@ -75,6 +75,9 @@ class ReDialDataLoader(BaseDataLoader):
         context_entities = get_onehot(batch_context_entities, self.n_entity)
         return {'context_entities': context_entities, 'item': torch.tensor(batch_item, dtype=torch.long)}
 
+
+    # def rec_interact(self):
+
     def conv_process_fn(self):
         dataset = []
         for conversation in tqdm(self.dataset):
@@ -138,3 +141,5 @@ class ReDialDataLoader(BaseDataLoader):
 
     def policy_batchify(self, batch):
         pass
+
+

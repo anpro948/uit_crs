@@ -157,7 +157,7 @@ class ReDialDataset(BaseDataset):
                     'context_entities': copy(context_entities),
                     'context_words': copy(context_words),
                     'context_items': copy(context_items),
-                    'item': movies
+                    'items': movies
                 }
                 augmented_conv_dicts.append(conv_dict)
             
@@ -232,21 +232,3 @@ class ReDialDataset(BaseDataset):
             'edge': list(edges),
             'entity': list(entities)
         }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,12 +8,12 @@ from .crs import *
 from crs.model.crs.redial import ReDialConvModel, ReDialRecModel
 
 Model_register_table = {
-    'TGRec': TGRecModel,
-    'TGConv': TGConvModel,
+    # 'TGRec': TGRecModel,
+    # 'TGConv': TGConvModel,
     'ReDialRec': ReDialRecModel,
     'ReDialConv': ReDialConvModel,
-    'GPT2': GPT2Model,
-    'BERT': BERTModel,
+    # 'GPT2': GPT2Model,
+    # 'BERT': BERTModel,
   
 }
 

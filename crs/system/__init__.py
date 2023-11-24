@@ -5,27 +5,27 @@ from loguru import logger
 # from .kgsf import KGSFSystem
 from .redial import ReDialSystem
 # from .ntrd import NTRDSystem
-from .tgredial import TGReDialSystem
+# from .tgredial import TGReDialSystem
 
 system_register_table = {
     'ReDialRec_ReDialConv': ReDialSystem,
     # 'KBRD': KBRDSystem,
     # 'KGSF': KGSFSystem,
-    'TGRec_TGConv': TGReDialSystem,
-    'TGRec_TGConv_TGPolicy': TGReDialSystem,
-    # 'InspiredRec_InspiredConv': InspiredSystem,
-    'GPT2': TGReDialSystem,
-    'Transformer': TGReDialSystem,
-    'ConvBERT': TGReDialSystem,
-    'ProfileBERT': TGReDialSystem,
-    'TopicBERT': TGReDialSystem,
-    'PMI': TGReDialSystem,
-    'MGCG': TGReDialSystem,
-    'BERT': TGReDialSystem,
-    'SASREC': TGReDialSystem,
-    'GRU4REC': TGReDialSystem,
-    'Popularity': TGReDialSystem,
-    'TextCNN': TGReDialSystem,
+    # 'TGRec_TGConv': TGReDialSystem,
+    # 'TGRec_TGConv_TGPolicy': TGReDialSystem,
+    # # 'InspiredRec_InspiredConv': InspiredSystem,
+    # 'GPT2': TGReDialSystem,
+    # 'Transformer': TGReDialSystem,
+    # 'ConvBERT': TGReDialSystem,
+    # 'ProfileBERT': TGReDialSystem,
+    # 'TopicBERT': TGReDialSystem,
+    # 'PMI': TGReDialSystem,
+    # 'MGCG': TGReDialSystem,
+    # 'BERT': TGReDialSystem,
+    # 'SASREC': TGReDialSystem,
+    # 'GRU4REC': TGReDialSystem,
+    # 'Popularity': TGReDialSystem,
+    # 'TextCNN': TGReDialSystem,
     # 'NTRD': NTRDSystem
 }
 

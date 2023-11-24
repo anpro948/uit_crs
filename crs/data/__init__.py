@@ -10,17 +10,17 @@ dataset_language_map = {
 }
 
 dataloader_register_table = {
-    'TGReDial': TGReDialDataLoader,
-    'TGRec': TGReDialDataLoader,
-    'TGConv': TGReDialDataLoader,
-    'TGRec_TGConv': TGReDialDataLoader,
+    # 'TGReDial': TGReDialDataLoader,
+    # 'TGRec': TGReDialDataLoader,
+    # 'TGConv': TGReDialDataLoader,
+    # 'TGRec_TGConv': TGReDialDataLoader,
 
     'ReDialRec': ReDialDataLoader,
     'ReDialConv': ReDialDataLoader,
     'ReDialRec_ReDialConv': ReDialDataLoader,
 
-    'BERT': TGReDialDataLoader,
-    'GPT2': TGReDialDataLoader,
+    # 'BERT': TGReDialDataLoader,
+    # 'GPT2': TGReDialDataLoader,
 }
 
 

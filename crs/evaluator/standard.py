@@ -7,8 +7,8 @@ from loguru import logger
 from nltk import ngrams # must update nltk to newest version to ignore raise StopIteration ngrams function
 from torch.utils.tensorboard import SummaryWriter
 
-from crsl.evaluator.base import BaseEvaluator
-from crsl.evaluator.utils import nice_report
+from crs.evaluator.base import BaseEvaluator
+from crs.evaluator.utils import nice_report
 from .embeddings import resources
 from .metrics import *
 from ..config import EMBEDDING_PATH

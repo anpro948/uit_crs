@@ -5,6 +5,7 @@ from loguru import logger
 from .crs import *
 # from .policy import *
 # from .recommendation import *
+from crs.model.crs.redial import ReDialConvModel, ReDialRecModel
 
 Model_register_table = {
     'TGRec': TGRecModel,
